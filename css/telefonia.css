@@ -1,0 +1,588 @@
+.hero-telefonia {
+    background: linear-gradient(135deg, var(--coal) 0%, var(--dark-blue) 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-telefonia::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(0, 172, 193, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(255, 183, 77, 0.15) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 1000px;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, var(--light-teal) 0%, var(--golden) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-content .subtitle {
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    color: var(--light-gray);
+    max-width: 800px;
+    margin: 0 auto 20px;
+    line-height: 1.6;
+    animation: fadeInUp 0.8s ease-out 0.2s backwards;
+}
+
+.hero-content .hero-description {
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--medium-gray);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.8;
+    animation: fadeInUp 0.8s ease-out 0.4s backwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+.panorama-mercado {
+    padding: 80px 0;
+    background: var(--dark-blue);
+}
+
+.panorama-mercado .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.panorama-mercado h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--light-teal);
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.mercado-intro {
+    max-width: 800px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.mercado-intro p {
+    color: var(--light-gray);
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    line-height: 1.8;
+}
+
+.mercado-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.mercado-card {
+    background: var(--coal);
+    border-radius: 15px;
+    padding: 30px;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mercado-card:hover {
+    transform: translateY(-5px);
+}
+
+.mercado-card h3 {
+    color: var(--golden);
+    font-size: clamp(1.3rem, 2vw, 1.8rem);
+    margin-bottom: 25px;
+}
+
+.mercado-content p {
+    color: var(--light-gray);
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.market-stats, .tendencias-section, .transformacion-digital {
+    margin-top: 30px;
+}
+
+.market-stats h4, .tendencias-section h4, .transformacion-digital h4 {
+    color: var(--light-teal);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.operadores-list, .tendencias-list {
+    list-style: none;
+    padding: 0;
+}
+
+.operadores-list li {
+    margin-bottom: 25px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.operador {
+    color: var(--golden);
+    font-weight: 600;
+    font-size: 1.1rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stats-detail strong {
+    color: var(--light-teal);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.stats-detail p {
+    color: var(--medium-gray);
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+.tendencias-list li {
+    margin-bottom: 20px;
+}
+
+.tendencias-list strong {
+    color: var(--light-teal);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.tendencias-list p {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+}
+
+.tendencias-list ul {
+    list-style: none;
+    padding-left: 15px;
+    margin-top: 10px;
+}
+
+.tendencias-list ul li {
+    color: var(--medium-gray);
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.tendencias-list ul li::before {
+    content: "•";
+    color: var(--golden);
+    position: absolute;
+    left: -15px;
+}
+
+@media (max-width: 768px) {
+    .panorama-mercado {
+        padding: 60px 0;
+    }
+    
+    .mercado-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+.comparativa-servicios {
+    padding: 80px 0;
+    background: var(--coal);
+}
+
+.comparativa-servicios .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.comparativa-servicios h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--light-teal);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.comparativa-servicios .section-intro {
+    color: var(--light-gray);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.6;
+}
+
+.tabla-comparativa {
+    background: var(--dark-blue);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.tabla-comparativa h3 {
+    color: var(--golden);
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.tabla-scroll {
+    overflow-x: auto;
+    margin: 0 -20px;
+    padding: 0 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    min-width: 800px;
+}
+
+th {
+    background: var(--coal);
+    color: var(--light-teal);
+    padding: 15px;
+    text-align: left;
+    font-weight: 600;
+    border-bottom: 2px solid var(--golden);
+}
+
+td {
+    padding: 15px;
+    color: var(--light-gray);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+td ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+td ul li {
+    color: var(--medium-gray);
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    position: relative;
+    padding-left: 15px;
+}
+
+td ul li::before {
+    content: "•";
+    color: var(--golden);
+    position: absolute;
+    left: 0;
+}
+
+/* Стили для мобильных устройств */
+@media (max-width: 768px) {
+    .comparativa-servicios {
+        padding: 60px 0;
+    }
+
+    .tabla-scroll {
+        margin: 0 -15px;
+        padding: 0 15px;
+    }
+
+    .tabla-comparativa {
+        padding: 20px;
+    }
+
+    td, th {
+        padding: 12px 10px;
+        font-size: 0.9rem;
+    }
+}
+
+
+
+
+.analisis-profundo {
+    padding: 80px 0;
+    background: var(--dark-blue);
+}
+
+.analisis-profundo .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.analisis-profundo h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--light-teal);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.analisis-profundo .section-intro {
+    color: var(--light-gray);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.6;
+}
+
+.operadores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.operador-analisis {
+    background: var(--coal);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.operador-analisis h3 {
+    color: var(--golden);
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    margin-bottom: 20px;
+}
+
+.descripcion-general p {
+    color: var(--light-gray);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.pros-cons {
+    display: grid;
+    gap: 25px;
+}
+
+.pros h4, .cons h4 {
+    color: var(--light-teal);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--golden);
+}
+
+.pros ul, .cons ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pros li, .cons li {
+    margin-bottom: 20px;
+}
+
+.pros strong, .cons strong {
+    color: var(--golden);
+    display: block;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+}
+
+.pros p, .cons p {
+    color: var(--medium-gray);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.pros li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.pros li::before {
+    content: "✓";
+    color: var(--light-teal);
+    position: absolute;
+    left: 0;
+}
+
+.cons li {
+    position: relative;
+    padding-left: 20px;
+}
+
+.cons li::before {
+    content: "!";
+    color: var(--golden);
+    position: absolute;
+    left: 5px;
+}
+
+@media (max-width: 768px) {
+    .analisis-profundo {
+        padding: 60px 0;
+    }
+
+    .operador-analisis {
+        padding: 20px;
+    }
+
+    .pros-cons {
+        gap: 20px;
+    }
+}
+
+
+
+.recomendaciones {
+    padding: 80px 0;
+    background: var(--coal);
+}
+
+.recomendaciones .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.recomendaciones h2 {
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    color: var(--light-teal);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.recomendaciones .section-intro {
+    color: var(--light-gray);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: clamp(1rem, 1.5vw, 1.1rem);
+    line-height: 1.6;
+}
+
+.recomendaciones-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.recomendacion-card {
+    background: var(--dark-blue);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.recomendacion-card h3 {
+    color: var(--golden);
+    font-size: clamp(1.3rem, 2vw, 1.6rem);
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--golden);
+    padding-bottom: 10px;
+}
+
+.perfil-recomendaciones h4 {
+    color: var(--light-teal);
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+.perfil-recomendaciones > p {
+    color: var(--light-gray);
+    margin-bottom: 25px;
+}
+
+.perfil-options {
+    display: grid;
+    gap: 25px;
+}
+
+.perfil {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.perfil h5 {
+    color: var(--golden);
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+}
+
+.perfil > p {
+    color: var(--light-gray);
+    margin-bottom: 15px;
+    font-size: 0.95rem;
+}
+
+.perfil ul {
+    list-style: none;
+    padding: 0;
+}
+
+.perfil li strong {
+    color: var(--light-teal);
+    display: block;
+    margin-bottom: 12px;
+    font-size: 1rem;
+}
+
+.perfil li p {
+    color: var(--medium-gray);
+    margin: 8px 0;
+    font-size: 0.9rem;
+    padding-left: 15px;
+    position: relative;
+}
+
+.perfil li p::before {
+    content: "→";
+    color: var(--golden);
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .recomendaciones {
+        padding: 60px 0;
+    }
+
+    .recomendacion-card {
+        padding: 20px;
+    }
+
+    .perfil {
+        padding: 15px;
+    }
+}
