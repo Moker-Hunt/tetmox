@@ -148,6 +148,7 @@ body {
 .cookie-banner a {
     color: var(--light-teal);
     text-decoration: none;
+    padding: 4px 10px;
 }
 
 .cookie-banner a:hover {
